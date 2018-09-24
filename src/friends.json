@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Bluegrass",
+    "image": "./images/Silverhawks_Bluegrass_7789.jpg",
+    "occupation": "Pilot",
+    "location": "Space"
+  },
+  {
+    "id": 2,
+    "name": "Copper Kidd",
+    "image": "./images/Silverhawks_Copper_Kidd_2_6779.jpg",
+    "occupation": "Kid",
+    "location": "Space"
+  },
+  {
+    "id": 3,
+    "name": "Hardware",
+    "image": "./images/Silverhawks_Hardware_2_5861.JPG",
+    "occupation": "Fighter",
+    "location": "Space"
+  },
+  {
+    "id": 4,
+    "name": "Hotwing",
+    "image": "./images/Silverhawks_Hotwing_1630.JPG",
+    "occupation": "Hot head",
+    "location": "Space"
+  },
+  {
+    "id": 5,
+    "name": "Melodia",
+    "image": "./images/Silverhawks_Melodia_9991.jpg",
+    "occupation": "Singer",
+    "location": "Space"
+  },
+  {
+    "id": 6,
+    "name": "MonStar",
+    "image": "./images/Silverhawks_MonStar_post-transformation_9733.png",
+    "occupation": "Gang Boss",
+    "location": "Center of a Star"
+  },
+  {
+    "id": 7,
+    "name": "MonStar",
+    "image": "./images/Silverhawks_MonStar_pre-transformation_8625.png",
+    "occupation": "Gang Boss",
+    "location": "Center of a Star"
+  },
+  {
+    "id": 8,
+    "name": "Quicksilver",
+    "image": "./images/Silverhawks_Quicksilver_8769.jpg",
+    "occupation": "Ladies Man",
+    "location": "Space"
+  },
+  {
+    "id": 9,
+    "name": "Stargazer",
+    "image": "./images/Silverhawks_Stargazer_9769.JPG",
+    "occupation": "Gazer",
+    "location": "Space"
+  },
+  {
+    "id": 10,
+    "name": "Silver Hawks",
+    "image": "./images/silverhawks-feature.jpg",
+    "occupation": "Space Cops",
+    "location": "Space"
+  },
+  {
+    "id": 11,
+    "name": "Tally Hawk",
+    "image": "./images/TallyHawkbio.png",
+    "occupation": "Superhero",
+    "location": "Space"
+  },
+  {
+    "id": 12,
+    "name": "Silver Hawks",
+    "image": "./images/silverhawks-db72cac5-5af9-42f9-b5b2-69d980ae7fa-resize-750.jpeg",
+    "occupation": "Space Cops",
+    "location": "Space"
+  }
+]
