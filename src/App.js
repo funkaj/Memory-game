@@ -12,39 +12,98 @@ class App extends Component {
     friends
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
+// ===================use this code
+// import React, { Component } from "react";
 
-  createStructure = friends => {
-    function createSignsArr(friends) {
-      const signs = []
-      console.log(signs)
-      for (let i = 1; i <= friends / 2; i++) {
-        signs.push(i, i)
-      }
-      return signs
-    }
-  
-    const signsDouble = createSignsArr(friends)
-  
-    const container = document.createElement('div')   
-    container.setAttribute('className', 'container')
-    document.body.appendChild(container)
-    for (let i = 0; i < friends; i++) {
-      let div = document.createElement('div')
-      div.setAttribute('className', 'tile')
-      div.setAttribute('id', `tile${i}`)
-      let randomNum = Math.floor(Math.random() * signsDouble.length)
-      let tile = signsDouble.splice(randomNum, 1)[0]
-      div.innerHTML = tile
-      container.appendChild(div)
-    }
-  }
+// const initialState = {
+//   tiles: [
+//     {
+//       color: '#000',
+//       clicked: false,
+//       id: 0,
+//     },
+//     {
+//       color: '#111',
+//       clicked: false,
+//       id: 1,
+//     },
+//     {
+//       color: '#222',
+//       clicked: false,
+//       id: 2,
+//     },
+//   ],
+//   score: 0,
+//   topScore: 0,
+// }
 
+// class Game extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = initialState
+//   }
+
+//   resetGame = () => {
+//     const tiles = this.state.tiles.map(tile => ({ ...tile, clicked: false }))
+//     console.log('TILES', tiles)
+//     this.setState({ score: 0, tiles })
+//     console.log('NEW STATE', this.state)
+//   }
+
+//   handleClick = id => {
+//     let clickedTile = this.state.tiles.find(tile => tile.id === id)
+
+//     if (clickedTile.clicked) {
+//       this.resetGame()
+//     } else {
+//       clickedTile.clicked = true
+//       let newTiles = this.state.tiles.filter(tile => tile.id !== id)
+//       newTiles.push(clickedTile)
+//       console.log('NEW TILES', newTiles)
+
+//       this.setState({
+//         ...this.state,
+//         score: this.state.score + 1,
+//         topScore: this.state.score === this.state.topScore
+//           ? this.state.topScore + 1
+//           : this.state.topScore,
+//         tiles: newTiles
+//       })
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <h1>Score: { this.state.score }</h1>
+//         <h1>Top Score: { this.state.topScore }</h1>
+//         {
+//           this.state.tiles.map(tile => ( // TODO: Shuffle these around! Hint: .sort()
+//             <div
+//               key={ tile.id }
+//               style={{
+//                 display: 'flex',
+//                 justifyContent: 'center',
+//                 alignItems: 'center',
+//                 width: 100,
+//                 height: 100,
+//                 margin: '1em',
+//                 backgroundColor: tile.color,
+//                 color: '#fff',
+//               }}
+//               onClick={ () => this.handleClick(tile.id) }
+//             >
+//               CARD { tile.clicked ? 'clicked' : null }
+//             </div>
+//           ))
+//         }
+//       </div>
+//     );
+//   }
+// }
+
+// export default Game;
+// ==============================
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
