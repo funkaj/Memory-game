@@ -91,6 +91,7 @@ class PrimarySearchAppBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
+        
         <MenuItem>
           <IconButton color="inherit">
           <a href='https://github.com/funkaj'><i className="fab fa-github"></i></a>
@@ -120,6 +121,7 @@ class PrimarySearchAppBar extends React.Component {
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
               Adam Funk
             </Typography>
+        
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <IconButton color="inherit">

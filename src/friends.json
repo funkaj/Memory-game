@@ -46,7 +46,7 @@
   },
   {
     "id": 10,
-    "image": "./images/silverhawks-feature.jpg",
+    "image": "./images/silverhawks-feature.png",
     "picked": false
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "id": 12,
-    "image": "./images/silverhawks-db72cac5-5af9-42f9-b5b2-69d980ae7fa-resize-750.jpeg",
+    "image": "./images/silverhawks-db72cac5-5af9-42f9-b5b2-69d980ae7fa-resize-750.png",
     "picked": false
   }
 ]
