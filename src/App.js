@@ -18,21 +18,26 @@ class App extends Component {
     super(props)
     this.state = state
   }   
-
+// reset board and score for new game
   resetGame = () => {
     const friends = this.state.friends.map(friend => ({ ...friend, clicked: false }))
     console.log('friends', friends)
     this.setState({ score: 0, friends })
     console.log('NEW STATE', this.state)
   }
-
+// handle the click element 
   handleClick = id => {
+    // assign a varible
     let clickedfriend = this.state.friends.find(friend => friend.id === id)
-      if (clickedfriend.clicked) { this.resetGame() } else {
+    // if clicked is true end game and call resetGame
+      if (clickedfriend.clicked) { this.resetGame() } 
+      //else change clicked to true push to a new array 
+      else {
       clickedfriend.clicked = true
       let newfriends = this.state.friends.filter(friend => friend.id !== id)
       newfriends.push(clickedfriend)
       console.log('NEW friends', newfriends)
+      // then set the new state
       this.setState({
         ...this.state,
         score: this.state.score + 1,
@@ -48,20 +53,19 @@ class App extends Component {
     return (
       <div>
           <PrimarySearchAppBar />
-          <Wrapper>
-          
-          <Title>Clicky-Hawks</Title>
-          <Typography>
-          <h1>Score: { this.state.score }</h1>
-          </Typography>
-          
-          <Typography>
-          <h1>Top Score: { this.state.topScore }</h1>
-          </Typography>  
-        
-          </Wrapper> 
+            <Wrapper>
+              <Title>Silver-Hawks Memory</Title>
+              <Typography variant='display2'>
+                Score: { this.state.score }
+              </Typography>
+
+              <Typography variant='display2'>
+                Top Score: { this.state.topScore }
+              </Typography>  
+            </Wrapper> 
           <Wrapper>
         {
+          //place images from friends.json onto DOM
           this.state.friends.map(friend =>
             <div
             key={ friend.id }
@@ -75,11 +79,12 @@ class App extends Component {
                 />
       
             </div>
-        ).sort(function (){return 0.5 - Math.random()})}
+            // and randomize the img placement on screen
+        ).sort(function (){return 0.5 - Math.random()})} 
           </Wrapper>
         </div>
     );
   }
 }
 
-export default App;
+export default (App);
