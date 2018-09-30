@@ -62,7 +62,7 @@ class App extends Component {
           </Wrapper> 
           <Wrapper>
         {
-          this.state.friends.map(friend => 
+          this.state.friends.map(friend =>
             <div
             key={ friend.id }
             onClick={ () => this.handleClick(friend.id) }
@@ -75,7 +75,7 @@ class App extends Component {
                 />
       
             </div>
-        )}
+        ).sort(function (){return 0.5 - Math.random()})}
           </Wrapper>
         </div>
     );
