@@ -15,28 +15,29 @@ const state = {
 class App extends Component {
   // Setting this.state.friends to the friends json array
   constructor(props) {
-    super(props)
-    this.state = state
-  }   
+    super(props);
+    this.state = state;
+  };
 // reset board and score for new game
   resetGame = () => {
-    const friends = this.state.friends.map(friend => ({ ...friend, clicked: false }))
-    console.log('friends', friends)
-    this.setState({ score: 0, friends })
-    console.log('NEW STATE', this.state)
-  }
+
+    const friends = this.state.friends.map(friend => ({ ...friend, clicked: false }));
+    this.setState({ score: 0, friends });
+   
+  };
+
 // handle the click element 
   handleClick = id => {
-    // assign a varible
-    let clickedfriend = this.state.friends.find(friend => friend.id === id)
+
+    let clickedfriend = this.state.friends.find(friend => friend.id === id);
     // if clicked is true end game and call resetGame
       if (clickedfriend.clicked) { this.resetGame() } 
       //else change clicked to true push to a new array 
       else {
-      clickedfriend.clicked = true
-      let newfriends = this.state.friends.filter(friend => friend.id !== id)
-      newfriends.push(clickedfriend)
-      console.log('NEW friends', newfriends)
+      	clickedfriend.clicked = true;
+      	let newfriends = this.state.friends.filter(friend => friend.id !== id);
+		  newfriends.push(clickedfriend);
+		  
       // then set the new state
       this.setState({
         ...this.state,
@@ -45,9 +46,10 @@ class App extends Component {
         ? this.state.topScore + 1
         : this.state.topScore,
         friends: newfriends
-      })
-    }
-  }
+      });
+    };
+  };
+
 // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
@@ -77,14 +79,13 @@ class App extends Component {
                 key={friend.id}
                 image={friend.image}
                 />
-      
             </div>
             // and randomize the img placement on screen
         ).sort(function (){return 0.5 - Math.random()})} 
           </Wrapper>
         </div>
     );
-  }
-}
+  };
+};
 
 export default (App);
